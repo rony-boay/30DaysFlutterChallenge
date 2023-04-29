@@ -1,3 +1,4 @@
+import 'package:crashcourse_1/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -5,14 +6,15 @@ void main() {
 }
 
 class myApp extends StatelessWidget {
-  const myApp({super.key});
+  myApp({super.key});
+
+  var name = "kuch bhi";
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container(
-        child: Text('first app'),
-      ),
+      home: HomePage(),
+      
     );
   }
 }
