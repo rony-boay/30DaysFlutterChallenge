@@ -1,3 +1,4 @@
+import 'package:crashcourse_1/utilis/routes.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,7 +16,17 @@ class HomePage extends StatelessWidget {
           child: Text('first app $name'),
         ),
       ),
-      drawer: Drawer(),
+
+      // drawer: Drawer(),
+      drawer: ElevatedButton(
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.loginroute);
+        },
+        style: TextButton.styleFrom(
+          minimumSize: const Size(40, 50),
+        ),
+        child: const Text('Login page'),
+      ),
     );
   }
 }
